@@ -1,0 +1,289 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  a {text-decoration:none;}
+  
+  /**** VALEURS GENERALES ****/ :root {--noir: #1b1b1b;}
+  .rs_body {
+      margin: 0;
+      padding: 0;
+      max-width: 650px;
+      margin: auto;
+      font-family: Montserrat;
+      color: #F6F6F6;
+      font-size: 12px;
+  }
+  .rs_header {
+      background-image: url('https://www.zupimages.net/up/19/27/ig8q.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 300px;
+      overflow:hidden;
+      display:flex;
+      align-items: center;
+      justify-content: space-between;
+      position:relative;
+      font-family: Playfair Display;
+      text-transform: lowercase;
+      font-size: 60px;
+      letter-spacing: 10px;
+      padding: 40px;
+  }
+  .rs_blur1 {
+      width: 250px;
+      height: 250px;
+      backdrop-filter: blur(15px);  
+      -webkit-backdrop-filter: blur(15px);
+      background-color: rgba(255,255,255, 0);
+      border-radius: 100%;
+      position:absolute;
+      bottom: -60px;
+      right: -80px;
+  }
+  .rs_links {
+      background: var(--noir);
+      padding: 20px;
+      display:flex;
+      justify-content:space-between;
+      font-size: 10px;
+      
+  }
+  .rs_links a {
+      color: #fff;
+      letter-spacing: 4px;
+  }
+  .rs_bg {
+      background-image: url('/Assets/Akio_fond_2.png');
+      background-size: cover;
+      background-position:top;
+      background-repeat: no-repeat;
+      margin: 0;
+      padding-bottom: 0.1px;
+    }
+  .rs_resum {
+      display:flex;
+  }
+  .rs_resum h6 {
+      position:relative;
+      writing-mode: tb;
+      transform: rotate(180deg);
+      margin: 40px;
+      font-family: 'Playfair Display';
+      font-size: 30px;
+      letter-spacing:5px;
+      font-style: italic;
+      padding-bottom: 60px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+  }
+  .rs_resum h6::before {
+      content:"✧";
+      position:absolute;
+      bottom: 0;
+      right: 10px;
+      font-size: 20px;
+      font-style: normal;
+  }
+  .rs_resum div {
+      margin: 40px;
+      position:relative;
+      font-size: 12px;
+  }
+  .rs_resum div::after {
+      border-radius: 100%;
+      border: 1px solid #fff;
+      height: 150px;
+      width: 150px;
+      content:""; 
+      position: absolute;
+      bottom: -20px;
+      right: -60px;
+  }
+  .rs_resum div::before {
+      border-radius: 100%;
+      border: 1px solid #fff;
+      height: 50px;
+      width: 50px;
+      content:""; 
+      position: absolute;
+      bottom: -30px;
+      right: 40px;
+  }
+  .rs_keywords, .rps_statut {
+      display:flex;
+      margin: 20px;
+      justify-content: space-between;
+  }
+  .rs_keywords span, .rps_statut span {
+      margin: 0 20px;
+      border: 1px solid #fff;
+      border-bottom-right-radius: 10px;
+      border-top-left-radius: 10px;
+      padding: 10px;
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: default;
+  }
+  .rs_about {
+      display:flex;
+      margin: 60px 0 40px;
+  }
+  .rs_about .rs_cara {
+      flex: 1;
+      margin: 0 40px;
+  }
+  .rs_about .rs_cara span {
+      display:block;
+      font-family: Playfair Display;
+      text-transform: lowercase;
+      letter-spacing: 2px;
+      font-style: italic;
+      font-size: 20px;
+      margin: 0 0 20px;
+  }
+  .rs_about .rs_icons {
+      flex: .5;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      /* flex-direction: column; */
+      flex-wrap: wrap;
+      margin-right: 40px;
+  }
+  .rs_about .rs_icons div {
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      position:relative;
+      margin: 10px 0;
+  }
+  .rs_about .rs_icons div::before {
+      height: 80px;
+      width: 80px;
+      border: 1px solid #fff;
+      pointer-events:none;
+      z-index: 0;
+      content:"";
+      position:absolute;
+      top: -10px;
+      left: -10px;    
+  }
+  .rs_about .rs_icons div img {
+      width: 80px;
+      mix-blend-mode: luminosity;
+      display:flex;
+      z-index: 1;
+      position:relative;
+  }
+  .rs_search {
+      display:flex;
+      margin: 35px;
+  }
+  .rs_search_left {
+      flex:1;
+      border: 1px solid #fff;
+      border-bottom-right-radius: 50px;
+      height: 400px;
+      margin: 5px;
+  }
+  .rs_search_block {
+      border: 40px solid transparent;
+      border-right: 30px solid transparent;
+      overflow:auto;
+      height: 100%;
+      padding-right: 10px;
+  }
+  .rs_search_block {
+      text-align: justify;
+  }
+  .rs_search_block div {
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid rgba(255,255,255, .4);
+  }
+  .rs_search_block div:last-child {
+      margin-bottom: 0;
+  }
+  .rs_search_block div b {
+      display: block;
+      font-family: Playfair display;
+      font-size: 14px;
+      font-style: italic;
+      text-transform: lowercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+  }
+  .rs_search_block div span {
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+  }
+  .rs_search_right {
+      flex: .5;
+      display:flex;
+      flex-direction:column;
+  }
+  .rs_search_right h6 {
+      border: 1px solid #fff;
+      border-top-right-radius: 50px;
+      flex:1; 
+      margin: 5px;
+      font-family: Playfair display;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 2px;
+  }
+  .rs_search_right div {
+      border: 1px solid #fff;
+      border-top-left-radius: 50px;
+      flex:3; 
+      margin: 5px;
+      background-image: url('/Assets/Sans_titre_9.png');
+      background-size: cover;
+      background-position: bottom;
+  }
+
+/**** PARTIE RPS ****/
+
+.rs_body.rps {
+    margin: 40px auto;
+    width: 80%;
+    max-width: 600px;
+}
+.rps_title {
+    height: 250px;
+    display:flex;
+    align-items:center;
+    border-bottom: 40px solid var(--noir);
+    background-image: url('/Assets/9ba99509ea25cf5b30be3d386d940dda.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.rps_title h6 {
+    font-family: Playfair Display;
+    font-size: 20px;
+    text-shadow: 1px 1px 3px rgb(0 0 0 / 50%);
+    margin: 40px;
+    width: 50%;
+    font-style: italic;
+    letter-spacing: 2px;
+    word-spacing: 10px;
+}
+.rps_body {
+    background-image: url('/Assets/Akio_fond_2.png');
+    background-size: cover;
+    background-position:top;
+    background-repeat: no-repeat;
+    min-height: 500px;
+    padding-top: 40px;
+}
+.rps_statut {
+    margin: 0 40px 40px;
+}
