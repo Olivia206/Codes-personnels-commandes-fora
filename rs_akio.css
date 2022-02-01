@@ -14,6 +14,7 @@
       font-family: Montserrat;
       color: #F6F6F6;
       font-size: 12px;
+      overflow:hidden;
   }
   .rs_header {
       background-image: url('https://www.zupimages.net/up/19/27/ig8q.jpg');
@@ -43,6 +44,18 @@
       bottom: -60px;
       right: -80px;
   }
+  .rs_title {
+      position:relative;
+      display:flex;
+  }
+  .rs_title::before {
+    color: transparent;
+    -webkit-text-stroke: 0.5px #fff;
+    position:absolute; 
+    top: -10px;
+    right: -10px;
+    content: "Akio";
+  }
   .rs_links {
       background: var(--noir);
       padding: 20px;
@@ -56,7 +69,7 @@
       letter-spacing: 4px;
   }
   .rs_bg {
-      background-image: url('/Assets/Akio_fond_2.png');
+      background-image: url('https://i.ibb.co/GTYBTwf/Akio-fond-2.png');
       background-size: cover;
       background-position:top;
       background-repeat: no-repeat;
@@ -245,7 +258,7 @@
       border-top-left-radius: 50px;
       flex:3; 
       margin: 5px;
-      background-image: url('/Assets/Sans_titre_9.png');
+      background-image: url('https://i.ibb.co/8cVRr7w/Sans-titre-9.png');
       background-size: cover;
       background-position: bottom;
   }
@@ -254,15 +267,13 @@
 
 .rs_body.rps {
     margin: 40px auto;
-    width: 80%;
-    max-width: 600px;
 }
 .rps_title {
     height: 250px;
     display:flex;
     align-items:center;
     border-bottom: 40px solid var(--noir);
-    background-image: url('/Assets/9ba99509ea25cf5b30be3d386d940dda.jpg');
+    background-image: url('https://i.ibb.co/n1Hz5QX/9ba99509ea25cf5b30be3d386d940dda.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -277,13 +288,304 @@
     word-spacing: 10px;
 }
 .rps_body {
-    background-image: url('/Assets/Akio_fond_2.png');
+    background-image: url('https://i.ibb.co/GTYBTwf/Akio-fond-2.png');
     background-size: cover;
     background-position:top;
     background-repeat: no-repeat;
     min-height: 500px;
-    padding-top: 40px;
+    padding: 40px 0 .1px;
 }
 .rps_statut {
     margin: 0 40px 40px;
+}
+.rps_list_encours {
+    margin: 40px 40px 0;
+}
+.rps_sec {
+    font-size: 40px;
+    font-style: italic;
+    letter-spacing: 3px;
+    font-family: playfair display;
+    text-transform: lowercase;
+    color: transparent;
+    -webkit-text-stroke: .5px #fff; 
+    margin: 0 40px;
+    text-align: right;
+}
+.rps_list_encours div {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid #fff;
+    padding: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #eee;
+    font-size: 9px;
+}
+.rps_list_encours div a {
+    font-family: Playfair Display;
+    font-size: 14px;
+    color: #fff;
+    font-style: italic;
+    text-transform: lowercase;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+.rps_list_encours div span {
+    display:flex;
+    width: 100%;
+    align-items:center;
+}
+.rps_list_encours div span::after {
+    flex:1;
+    content:"";
+    margin-left: 20px;
+    height: 1px;
+    background: #fff;
+}
+.rps_listing {
+    display:flex;
+    margin: 40px;
+    height: 400px;
+}
+.rps_left {
+    flex:2;
+    border: 1px solid #fff;
+    border-top-left-radius: 50px;
+    position: relative;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    margin-right: 10px;
+}
+.rps_left .rps_sec {
+    position:absolute;
+    top: 0; right: 0;
+    font-size: 30px;
+    margin: 0;
+    margin-right: -7px;
+    overflow: auto;
+    opacity: .8;
+}
+.rps_list.termines {
+    margin: 50px 20px 20px;
+}
+.rps_list.termines div {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: Karla;
+}
+.rps_list.termines div a {
+    font-family: Playfair Display;
+    text-transform: lowercase;
+    font-style: italic;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.rps_right {
+    width: 40%;
+    display:flex;
+    flex-direction: column;
+}
+.rps_right .rps_list {
+    flex:1;
+    border: 1px solid #fff;
+    border-top-left-radius: 50px;
+    position: relative;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    margin-right: 10px;
+}
+.rps_right .rps_list.abandons {
+    margin-right: 0;
+    margin-bottom: 10px;
+    flex:1;
+}
+.rps_right .rps_list.autres {
+    flex:1;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 50px;
+    margin-right: 0;
+}
+.rps_right .rps_sec {
+    position:absolute;
+    top: 0; right: 0;
+    font-size: 25px;
+    margin: 0;
+    margin-right: -7px;
+    opacity: .8;  
+
+}
+.rps_plus {
+    border: 20px solid transparent;
+    border-right: 15px solid transparent;
+    overflow:auto;
+    margin-top: 30px;
+    height: calc(100% - 30px);
+}
+.rps_plus span {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: Karla;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 5px;
+}
+.rps_plus span a {
+    font-family: Playfair Display;
+    text-transform: lowercase;
+    font-style: italic;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/****** LIENS ******/
+
+.rs_body.liens {
+    background-image: url('https://i.ibb.co/GTYBTwf/Akio-fond-2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-bottom: .1px;
+}
+.rs_liens_header {
+    height: 200px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color: #fff;
+    position:relative;
+    font-family: Playfair Display;
+    text-transform: lowercase;
+    font-size: 50px;
+    letter-spacing: 5px;
+    padding: 40px;
+    line-height: 35px;
+}
+.rs_liens_header span {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+}
+.rs_liens_header span::before {
+  color: transparent;
+  -webkit-text-stroke: 0.5px #fff;
+  position:absolute; 
+  top: -10px;
+  right: -10px;
+  content: "Take from me Whatever you want Whatever you need";
+  width: 100%;
+  opacity: .5;
+  text-align: left;
+}
+.rs_lien {
+    margin: 40px;
+    display:flex;
+}
+.lien_left {
+    width: 160px;
+    height: 160px;
+    border: 1px solid #fff;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    background-size: cover;
+    background-position:center;
+}
+.lien_right {
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items: flex-end;
+    height: 160px;
+    margin-left: 20px;
+    mix-blend-mode: luminosity;
+    mix-blend-mode: hard-light;
+}
+.lien_nom {
+    position:relative;
+    font-family: Playfair Display;
+    text-transform: lowercase;
+    color: #fff;
+    letter-spacing: 2px;
+    display:flex;
+    align-items:center;
+    font-size: 30px;
+}
+.lien_nom span {
+    color: transparent;
+    -webkit-text-stroke: 0.5px #fff;
+    position:absolute; 
+    top: -10px;
+    right: -10px;
+    width: 100%;
+    opacity: .5;
+    white-space: nowrap;
+}
+.lien_nom div {
+    flex:1;
+    display:flex;
+    align-items:center;
+}
+.lien_nom div::after {
+    content:"";
+}
+.lien_desc {
+    margin-top: 20px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-align:justify;
+    flex:1;
+    overflow:auto;
+}
+.lien_bot {
+    display:flex;
+    align-items:center;
+    position:relative;
+    width: 100%;
+}
+.lien_bot::after {
+    height: 20px;
+    width: 20px;
+    transform: rotate(45deg);
+    content:"";
+    border: 1px solid #fff;
+}
+.lien_bot div {
+    height: 1px;
+    flex:1;
+    background: #fff;
+    margin-right: 3px;
+}
+
+
+
+/****** SCROLLBARS *******/
+
+.lien_desc::-webkit-scrollbar, .rs_search_block::-webkit-scrollbar, .rps_list::-webkit-scrollbar, .rps_plus::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+.lien_desc::-webkit-scrollbar-thumb, .rs_search_block::-webkit-scrollbar-thumb, .rps_list::-webkit-scrollbar-thumb, .rps_plus::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: 1px solid #fff;
+}
+.lien_desc::-webkit-scrollbar-track, .rs_search_block::-webkit-scrollbar-track, .rps_list::-webkit-scrollbar-track, .rps_plus::-webkit-scrollbar-track {
+    background: transparent;
 }
