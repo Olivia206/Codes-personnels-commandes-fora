@@ -264,10 +264,6 @@
   }
 
 /**** PARTIE RPS ****/
-
-.rs_body.rps {
-    margin: 40px auto;
-}
 .rps_title {
     height: 250px;
     display:flex;
@@ -373,6 +369,8 @@
 }
 .rps_list.termines {
     margin: 50px 20px 20px;
+    overflow: auto;
+    padding-right: 5px;
 }
 .rps_list.termines div {
     margin-bottom: 20px;
@@ -507,6 +505,7 @@
     border-top-right-radius: 50px;
     background-size: cover;
     background-position:center;
+    mix-blend-mode: luminosity;
 }
 .lien_right {
     flex:1;
@@ -515,8 +514,6 @@
     align-items: flex-end;
     height: 160px;
     margin-left: 20px;
-    mix-blend-mode: luminosity;
-    mix-blend-mode: hard-light;
 }
 .lien_nom {
     position:relative;
@@ -553,12 +550,14 @@
     text-align:justify;
     flex:1;
     overflow:auto;
+    padding-right: 5px;
 }
 .lien_bot {
     display:flex;
     align-items:center;
     position:relative;
     width: 100%;
+    margin-top: 5px;
 }
 .lien_bot::after {
     height: 20px;
@@ -581,11 +580,17 @@
 .lien_desc::-webkit-scrollbar, .rs_search_block::-webkit-scrollbar, .rps_list::-webkit-scrollbar, .rps_plus::-webkit-scrollbar {
     width: 5px;
     height: 5px;
+    -webkit-box-shadow: none !important;
+    border-radius: 0px !important;
 }
 .lien_desc::-webkit-scrollbar-thumb, .rs_search_block::-webkit-scrollbar-thumb, .rps_list::-webkit-scrollbar-thumb, .rps_plus::-webkit-scrollbar-thumb {
     background: transparent;
     border: 1px solid #fff;
+    -webkit-box-shadow: none !important;
+    border-radius: 0px !important;
 }
 .lien_desc::-webkit-scrollbar-track, .rs_search_block::-webkit-scrollbar-track, .rps_list::-webkit-scrollbar-track, .rps_plus::-webkit-scrollbar-track {
     background: transparent;
+    -webkit-box-shadow: none !important;
+    border-radius: 0px !important;
 }
