@@ -1,0 +1,330 @@
+body {background: #02272a;}
+a {text-decoration:none;}
+
+:root {
+    --color1: #;
+    --color2: #;
+}
+
+@font-face {font-family: "flower for rosalline";src: url('https://dl.dropbox.com/s/ahruzjq78qen0x5/FlowerForRosalline.woff?dl=0');} 
+
+.katsuki {
+    background: #111; 
+    border: 5px solid #000; 
+    width: 600px; 
+    margin: 20px auto;
+} 
+.katsuki a {cursor: crosshair;} 
+.katsu-head {
+    display:flex; 
+    margin: 25px;
+} 
+.katsimg {
+    width: 250px; 
+    height: 400px; 
+    background-size: cover; 
+    background-position:center; 
+    display:flex; 
+    align-items:center; 
+    justify-content:center; 
+    overflow:hidden; 
+    border: 5px solid #000;
+    flex-direction:column;
+} 
+.katanec {
+    flex:1;background: rgba(0,0,0,0.8); color: #bfbfbf; flex: 1; margin: 20px; display: flex; flex-direction: column; opacity: 0; transform: scale(0.9); transition: all 0.5s ease; width:calc(100% - 40px); overflow:auto; align-items:center;
+} 
+.katanec ttl {display:block;font-family: Playfair display; font-weight: bolder; color:#B37D4E; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; font-style:italic; margin: 20px; font-size: 16px;
+} 
+.katanec span {border-bottom: 1px solid #666666; font-family: Karla; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin: 0px 15px 15px; padding-bottom: 15px; text-align: center; width:calc(100% - 40px);} 
+.katsimg:hover .katanec {opacity: 1; transform: scale(1); transition: all 0.5s ease;
+} 
+.head-prez {
+    flex:1; color: #fff; text-align:justify; font-family: Karla; font-size: 11px; margin-left: 25px; padding: 40px;
+} 
+.head-prez b {font-family: "flower for rosalline"; display:block; color: #111; text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff; font-size: 55px; text-align:center; font-weight:normal; margin-bottom: 10px; line-height: 200%;
+} 
+.head-prez span {display:block; font-size: 30px; color: #fff;
+} 
+.head-prez div {
+    display:flex; align-items:center; justify-content:center; margin-top: 20px; font-size: 16px;
+} 
+.head-prez div:before {
+    border-bottom: 1px solid #fff; content:""; width: 100%; margin-right: 10px;
+} 
+.head-prez div:after {
+    border-bottom: 1px solid #fff; content:""; width: 100%; margin-left: 10px;
+} 
+    
+/*** Onglets ***/ 
+
+.katsutabs {
+    display:flex; justify-content: flex-end; align-items:center; height: 50px; background: #000; color: #fff; padding-right: 15px;} 
+.katsutabs label {
+    font-size:20px; cursor: crosshair; margin: 0 10px; transition: 1s ease; color: #fff; transition: 1s ease;
+} 
+.katsutabs label:hover, .katsutabs label:checked {transition: 1s ease; color: #B37D4E !important;} 
+.tabs-body {flex:1; background-image: url('https://www.zupimages.net/up/19/31/lb6g.png'); background-repeat:no-repeat; background-position:bottom left;
+} 
+.tabs-body input {display:none;} 
+.tabs-body .rcont {
+    height:400px;position:relative; overflow:hidden;
+} 
+.tabs-body .rcont > div {position: absolute; width:100%; height:400px; transition: ease 0.5s; color: #fff;
+} 
+.tabs-body .rcont .r1{left:-100%;} 
+.tabs-body .rcont .r2 {left: -100%;} 
+.tabs-body .rcont .r3 {left: -100%;} 
+.tabs-body .rcont .r4 {left: -100%;} 
+.tabs-body input#r1:checked ~ .rcont .r1, 
+.tabs-body input#r2:checked ~ .rcont .r2, 
+.tabs-body input#r3:checked ~ .rcont .r3, 
+.tabs-body input#r4:checked ~ .rcont .r4 {
+    left:0px;
+} 
+.tabs-body input#r1:checked ~ .rtabs label[for=r1], 
+.tabs-body input#r2:checked ~ .rtabs label[for=r2], 
+.tabs-body input#r3:checked ~ .rtabs label[for=r3]{
+    transition: 1s ease;
+} 
+
+/**** TAB 1 ****/ 
+
+.katsu-prez {display:flex; margin: 25px; background: rgba(0,0,0,0.5); font-family: Karla; font-size: 12px; padding: 25px; height: 300px;
+} 
+.prez-left {
+    flex:1; display:flex; align-items:center; justify-content:center;
+} 
+.baziks {overflow: auto; flex:1; width: 100%;
+} 
+.baziks div {border-bottom: 1px solid rgba(179,125,78, 0.5); display:block; text-transform:uppercase; letter-spacing: 1px; color:#BBB; padding-bottom: 5px; margin-bottom: 20px; text-align:right; font-size:11px;
+} 
+.baziks div:last-child {
+    margin-bottom: 0px;
+} 
+.baziks span {
+    display:block; font-family: Playfair display; font-weight: bolder; color:#B37D4E; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; letter-spacing: 0px; text-align:left;
+}
+.prez-right {flex:1; display:flex; align-items:center; justify-content:center; flex-direction:column;
+} 
+.prez-right img {width: 150px; height: 150px; border-radius: 100%; border: 10px solid #111; background: #111;
+} 
+.kat-links {
+    display:flex; 
+    margin-top: 25px;
+} 
+.kat-links a {
+    margin: 0 10px; 
+    background: #B37D4E; 
+    color: #000; 
+    border-radius: 100%; 
+    display:flex; 
+    align-items:center; 
+    justify-content:center; 
+    height: 30px; 
+    width: 30px; 
+    border: 1px solid #000; 
+    font-size: 16px;
+} 
+.kat-links a:hover span:before {animation: bounceIn 900ms 1;} 
+
+/**** TAB 2 ****/ 
+
+.katsu-search {
+    display:flex; 
+    margin: 25px; 
+    background: rgba(0,0,0,0.5); 
+    font-family: Karla; 
+    font-size: 12px; 
+    padding: 25px; 
+    height: 300px;
+    position:relative; 
+    align-items:center; 
+    justify-content: center; 
+    overflow:hidden;
+} 
+.kattl {
+    font-family: "flower for rosalline"; 
+    font-size: 80px; 
+    font-style: italic; 
+    color: transparent; 
+    -webkit-text-stroke: 1px #B37D4E; 
+    text-align:right; 
+    position:absolute; 
+    right: 0; top: -45px; 
+    opacity: 0.8;
+} 
+.searchin {
+    overflow:auto; 
+    height: 250px; 
+    flex:1; 
+    padding-right: 10px;
+} 
+.searchin::-webkit-scrollbar {width: 4px;} 
+.searchin::-webkit-scrollbar-track {background: rgba(0,0,0,0);;} 
+.searchin::-webkit-scrollbar-thumb{background: #000;} 
+
+/**** TAB 3 ****/ 
+
+.kat-rps {
+    color: #fff;
+} 
+.listings {
+    display:flex; 
+    margin: 25px;
+} 
+.rps-left {
+    background: rgba(0,0,0,0.5); 
+    flex:1; 
+    border: 1px solid #000; 
+    display:flex; 
+    align-items:center; 
+    justify-content:center; 
+    padding: 25px;
+} 
+.rp-cont {
+    margin: 25px; 
+    height: 147px; 
+    overflow:auto; 
+    flex:1; 
+    overflow-x:hidden;
+    padding-right: 5px;
+} 
+.rps-right {
+    flex:1; 
+    margin-left: 25px;
+} 
+.rpri {
+    background: rgba(0,0,0,0.5); 
+    flex: 1; 
+    border: 1px solid #000; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+} 
+.rpri:first-child {
+    margin-bottom: 25px;
+} 
+.rpri .rp-cont {
+    height: 60px; 
+    overflow:auto;
+    flex:1; 
+} 
+.rpri::-webkit-scrollbar, .rp-cont::-webkit-scrollbar {width: 4px;} 
+.rpri::-webkit-scrollbar-track, .rp-cont::-webkit-scrollbar-track {background: rgba(0,0,0,0);;} 
+.rpri::-webkit-scrollbar-thumb, .rp-cont::-webkit-scrollbar-thumb{background: #000;} 
+.rp-link {
+    background: #111; 
+    padding: 5px 10px; 
+    border-left: 3px solid #B37D4E; 
+    display:block; 
+    position:relative; 
+    display:flex; 
+    align-items:center; 
+    justify-content:center; 
+    height: 20px; 
+    margin-bottom: 8px; 
+    flex:1; 
+    transition: 1s ease; 
+    color: #B37D4E; 
+    overflow:hidden; 
+    font-family: Playfair Display;
+} 
+.rp-link span {
+    position:absolute; 
+    margin-top: -20px; 
+    opacity:0; 
+    transition: 1s ease; 
+    font-style:italic; 
+    font-size: 13px;
+} 
+.rp-link:hover span {
+    margin-top: 0px; 
+    opacity:1; 
+    transition: 1s ease;
+} 
+.rp-link b {
+    position:absolute; 
+    margin-top: 0px; 
+    transition: 1s ease; 
+    opacity: 1; 
+    font-weight: normal;  
+    font-size: 14px;
+} 
+.rp-link:hover b {
+    margin-top: 20px; 
+    transition: 1s ease; 
+    opacity: 0;
+} 
+.rps-counter {
+    display:flex; 
+    margin: 25px 20px;
+} 
+.count-rp1, .count-rp2 {
+    flex:1;
+}
+.rps-counter span {
+    background: #B37D4E; 
+    border-radius: 5px; 
+    margin: 5px; 
+    display:flex;
+    align-items:center; 
+    justify-content:center; 
+    flex:1; 
+    font-family: Karla; 
+    text-transform:uppercase; 
+    letter-spacing: 1px; 
+    padding: 5px 10px; 
+    font-size: 10px; 
+    position:relative; 
+    overflow:hidden; 
+    height: 20px;
+} 
+.count-rp1 span:first-child:before {
+    content:'\ec2e'; 
+    font-family:'honeybee'; 
+    font-size:35px; 
+    color: #111; 
+    position:absolute; 
+    left:-5px; 
+    top: -8px; 
+    opacity: 0.7;
+} 
+.count-rp1 span:last-child:before {
+    content:'\e9ef'; 
+    font-family:'honeybee'; 
+    font-size:30px; 
+    color: #111; 
+    position:absolute; 
+    left:-4px; 
+    top: -2px; 
+    opacity: 0.7;
+} 
+.count-rp2 span:first-child:before {
+    content:'\e967'; 
+    font-family:'honeybee'; 
+    font-size:35px; 
+    color: #111; 
+    position:absolute; 
+    left:-5px; 
+    top: -8px; 
+    opacity: 0.7;
+} 
+.count-rp2 span:last-child:before {
+    content:'\ec4a';
+    font-family:'honeybee'; 
+    font-size:30px; 
+    color: #111; 
+    position:absolute; 
+    left:-2px; 
+    top: -5px; 
+    opacity: 0.7;
+} 
+
+/**** TAB 4 ****/ .katime {margin: 25px; height: 330px; overflow:auto; padding: 10px; color: #bbb; font-family: Karla; font-size: 12px; text-align:justify;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;} .katime::-webkit-scrollbar {width: 4px;} .katime::-webkit-scrollbar-track {background: rgba(0,0,0,0);;} .katime::-webkit-scrollbar-thumb{background: #000;} .katev {display:flex; align-items:flex-start;} .year {padding: 0 20px; font-family: Playfair Display; font-size: 16px; width: 80px;} .event {border-left: 2px solid #B37D4E; padding: 0px 20px 20px; position:relative;} .event:before {content:'\ec56'; font-family:'honeybee'; font-size:12px; color: #B37D4E; position:absolute; left:-7px; top: -1px; text-shadow: -1px -1px 0 #111, 1px -1px 0 #111, -1px 1px 0 #111, 1px 1px 0 #111; background: #111;} .event span {color: #B37D4E; display:block; font-family: Playfair display; font-style: italic; font-size: 16px; text-transform: lowercase;}
+
+
+/****** ANIMATIONS *****/
+
+@keyframes bounceIn {from, 20%, 40%, 60%, 80%, to {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);} 0% {opacity: 0;transform: scale3d(.3, .3, .3);} 20% {transform: scale3d(1.1, 1.1, 1.1);} 40% {transform: scale3d(.9, .9, .9);} 60% {opacity: 1;transform: scale3d(1.03, 1.03, 1.03);} 80% {transform: scale3d(.97, .97, .97);} to {opacity: 1;transform: scale3d(1, 1, 1);}}
+.bounceIn {animation-name: bounceIn;}

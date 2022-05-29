@@ -1,0 +1,502 @@
+.ran-atai {
+  border-radius: 20px;
+  font-family: Poppins;
+  background: linear-gradient(132deg, #ffbedc, #d3aad6, #ba9fd2, #a17cbe, #8186ca, #95a4d7, #b5a4d7);
+  background-size: 400% 400%;
+  animation: Gradient 15s ease infinite;
+}
+.ran-atai * {
+  transition: all .5s ease-in-out;
+}
+.links-top {
+  color: #fff;
+  display:flex;
+  justify-content: space-between;
+  padding: 20px;
+  color: #dfe3ee;
+}
+.links-top span {
+  margin-right: 10px;
+  font-size: 10px;
+}
+.links-top img {
+  width: 50px;
+  border-radius: 100%; 
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.07); 
+  border: 2px solid #fff;
+  margin-left: 20px;
+}
+.ran-atai-dashboard {
+  display:flex;
+  align-items:center;
+}
+.atai-notifs {
+  border-right: 1px solid #f5f7fb;
+  padding: 0 20px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+} 
+.atai-notifs span {
+  margin-left: 20px; 
+  color: #fff; 
+  font-size: 16px; 
+  cursor: pointer; 
+  position:relative;
+} 
+.atai-notifs span:first-child:after, .atai-notifs span:last-child:after {
+  background: linear-gradient(-40deg,#57aeca,#ba5a9a); 
+  position:absolute; 
+  content: "15"; 
+  border-radius: 100%; 
+  font-size: 9px; 
+  color: #fff; 
+  box-shadow: 2px 1px 3px rgba(0, 0, 0, 0.07); 
+  height: 18px; 
+  width: 18px; 
+  display:flex; 
+  align-items:center; 
+  justify-content:center; 
+  bottom:-10px; 
+  right: -7px; 
+  border: 1px solid #fff; 
+  pointer-events: none;} 
+.atai-notifs span:last-child:after {
+  content: "24";
+}
+.ran-atai-profile {
+  display:flex;
+  margin: 0 40px 40px;
+}
+.ran-atai-profile-left {
+  width: 25%;
+  position:relative;
+}
+.atai-view { 
+  display:flex; 
+  flex-direction:column; 
+  align-items:center;
+  color: #fff;
+  position: sticky;
+  top: 20px;
+}
+.atai-view img {
+  width: 150px; 
+  height: 150px; 
+  border-radius: 100%; margin: 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.07); border: 2px solid #fff;
+}
+.atai-id {
+  font-family: Montserrat; 
+  font-size: 12px; 
+  color: #c2c9d4;
+} 
+.atai-id span {
+  color: #fff;
+  display:block;
+  font-size: 18px; 
+  font-weight: 500; 
+  margin-bottom:5px;
+}
+.atai-btn {
+  background: linear-gradient(-40deg,#57aeca,#ba5a9a); 
+  border-radius: 20px;
+  color: #fff;
+  padding: 8px 20px; 
+  margin: 20px; 
+  font-size: 11px; 
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.07); 
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); 
+  cursor: pointer;
+  border: 1px solid #fff;
+}
+.ran-atai-infos {
+  flex:1; 
+  margin: 20px;
+}
+.ran-atai-gen {
+  margin-bottom: 40px;
+  background: #fff; 
+  border-radius: 10px; 
+  padding: 5px 20px; 
+  text-transform:uppercase; 
+  font-size: 11px; 
+  color: #777;
+}
+.ran-atai-gen div {
+  display:flex; 
+  align-items:center; 
+  justify-content:space-between; 
+  border-bottom: 1px solid #DDD; 
+  height: 40px;
+} 
+.ran-atai-gen div:last-child {
+  border:none;
+} 
+.ran-atai-gen span {
+  font-size: 18px;
+  color: #c2c9d4;
+  margin: 10px;
+}
+
+/***** PROFIL ONGLETS *****/
+
+#ran-atai-tabs {
+  height:400px;
+  display:flex;
+  flex-direction:column;
+  position:relative;
+}
+#ran-atai-tabs label {
+  position:absolute;
+  top: 0; left: 0;
+}
+#ran-atai-tabs label:nth-child(4) {
+  left: 42%;
+}
+#ran-atai-tabs label:nth-child(6) {
+  right: 0;
+  left: unset;
+}
+#ran-atai-tabs label div {
+  background: none;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 5px 10px; 
+  border-radius: 5px;
+  font-size: 12px;
+}
+#ran-atai-tabs input:checked+label div {
+  background: rgba(255,255,255,.8);
+  color: #8186ca;
+}
+#ran-atai-tabs input {
+  display: none;
+}
+.ran-atai-tabs-cont {
+  position: relative; 
+  overflow: hidden; 
+  margin-top: 60px;
+  height: calc(100% - 60px);
+}
+.ran-atai-tabs-cont .tb1, 
+.ran-atai-tabs-cont .tb2, 
+.ran-atai-tabs-cont .tb3 {
+  position: absolute; 
+  top: 0; left: 0px; 
+  right: 0px; bottom: 0px; 
+  z-indez: 1; 
+  opacity:0;
+}
+#ran-atai-tabs input#tb1:checked ~ .ran-atai-tabs-cont .tb1,
+#ran-atai-tabs input#tb2:checked ~ .ran-atai-tabs-cont .tb2, 
+#ran-atai-tabs input#tb3:checked ~ .ran-atai-tabs-cont .tb3 {
+  z-index: 2;
+  opacity: 1;
+}
+/*** TAB 1 ***/
+.about {
+  display:flex;
+  flex-direction:column;
+  color: #fff;
+}
+.ran-atai-prez {
+  flex:1;
+  font-size: 13px;
+  text-align: justify;
+  overflow:auto;
+  padding-right: 5px;
+  min-height: 120px;
+}
+.ran-atai-pics {
+  display:flex;
+  justify-content:space-between;
+  flex-wrap: wrap;
+}
+.ran-atai-pics img {
+  margin: 20px 10px 0;
+  height: 80px;
+  border-radius: 10px;
+  opacity: .8;
+}
+.ran-atai-pics img:hover {
+  opacity: 1;
+}
+/*** TAB 2 ***/
+.ran-interests {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: fit-content;
+  max-height: 100%;
+}
+.ran-interests div {
+  display:flex;
+  align-items:center;
+  flex-direction:column;
+  color: #fff;
+  font-size: 10px; 
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 10px;
+}
+.ran-interests div img {
+  height: 65px;
+  opacity: .8;
+  margin-bottom: 5px;
+}
+/*** TAB 3 ***/
+.atai-frendlist {
+  overflow:auto;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: fit-content;
+  max-height: 100%;
+}
+.atai-frendlist a {
+  text-decoration:none;
+}
+.atai-rela {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.07); 
+  background: #f6f6f6;
+  border-radius: 20px;
+  overflow:hidden;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  height: 80px;
+  width: calc(50% - 10px);
+  margin-bottom: 20px;
+}
+.atai-rela img {
+  width: 80px;
+}
+.atai-rela div {
+  margin: 0 10px;
+}
+.atai-rela b {
+  color: #444;
+  display:block;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: montserrat;
+  font-weight: 900;
+}
+.atai-rela span {
+  color: #aaa;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+/***** MAIL ONGLETS *****/
+
+#mail-tabs {
+  height: 650px;
+  margin: auto; 
+  position: relative;
+}
+#mail-tabs label {
+  top: 0px;
+  text-align: center;
+  background: none;
+  cursor: pointer;
+  transition: all ease 0.5s;
+  position: absolute;
+  width: 33.33%;
+}
+#mail-tabs input {
+  display:none;
+}
+.links-tab {
+  display: flex;
+  align-items:center;
+  margin-left: 40px;
+  justify-content: flex-start;
+  opacity: .7;
+}
+.links-tab div {
+  background: #f6f6f6;
+  color: #8186ca;
+  margin-right: 10px;
+  position:relative;
+  padding: 10px 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 10px;
+}
+.links-tab div::before, .links-tab div::after {
+  content: "";
+  position: absolute;
+  left: -20px;
+  bottom: 0;
+  height: 20px;
+  width: 20px;
+  background-image: url(https://www.aht.li/3628458/svg-corner-F6F6F6.svg);
+  background-size: cover;
+  transform: rotate(90deg);
+}
+.links-tab div::after {
+  left: unset; 
+  right: -20px;
+  transform: rotate(180deg);
+}
+#mail-tabs label:nth-child(4) {
+  left: 20%;
+}
+#mail-tabs input:checked+label .links-tab, .links-tab:hover {opacity: 1;}
+#mail-tabs .contb {
+  height: calc(100% - 35px); 
+  width: 100%; 
+  background: #f6f6f6; 
+  position: absolute;
+  border: 30px solid transparent; 
+  box-sizing: border-box; 
+  top: 35px; 
+  overflow: hidden;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+#mail-tabs .contb .cont1, #mail-tabs .cont2 {
+  height: 100%; 
+  width: 100%; 
+  position: absolute;
+  padding-right: 10px;
+  box-sizing: border-box; 
+  color: #222;
+  font-size: 12px; 
+  letter-spacing: 1px; 
+  display: flex; 
+  flex-direction: column; 
+  overflow: auto; 
+  top: 0;
+  transition: 1s ease; 
+  -webkit-transition: 1s ease; 
+  -moz-transition:1s ease;
+}
+
+#mail-tabs #wan1:checked+label ~ .contb .cont1 {left: 0}
+#mail-tabs #wan1:checked+label ~ .contb .cont2 {left: 110%}
+#mail-tabs #wan2:checked+label ~ .contb .cont1 {left: -110%}
+#mail-tabs #wan2:checked+label ~ .contb .cont2 {left: 0}
+#mail-tabs #wan1:checked+label ~ .tabbt t1 {opacity: 1}
+#mail-tabs #wan2:checked+label ~ .tabbt t2 {opacity: 1}
+
+.ran-mail-profile {
+  display:flex;
+  align-items:center;
+}
+.ran-mail-profile img {
+  height: 120px;
+  width: 120px;
+  border-radius: 100%;
+  border: 5px solid #fff;
+  background:: #fff;
+  margin-right: 20px;
+}
+.ran-mail-profile div {
+  display:flex;
+  flex-direction:column;
+}
+.ran-mail-profile div span {
+  font-size: 20px;
+  text-transform: lowercase;
+  color: #333;
+  font-weight: 900;
+}
+.ran-mail-profile div a {
+  color: #aaa;
+  text-decoration:none;
+}
+.ran-mail-list {
+  background: #ddd;
+  border-radius: 20px;
+  overflow:hidden;
+  margin-top: 40px;
+  height: 100%;
+}
+.fake-tabs {
+  background: #8186ca;
+  display:flex;
+  justify-content:space-between;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+.fake-tabs span {
+  padding: 20px;
+  border-right: 1px solid rgba(255,255,255,.2);
+  text-align:center;
+  display:flex;
+  justify-content:center;
+  flex:1;
+  cursor: pointer;
+  position:relative;
+}
+.fake-tabs span:first-child {
+  background: #f6c4d4;
+}
+.fake-tabs span:first-child::after {
+  height: 15px;
+  width: 15px;
+  content:"";
+  background: #f6c4d4;
+  position:absolute;
+  bottom: -7.5px;
+  transform: rotate(45deg);
+}
+.ran-contact {
+  margin: 0 40px;
+  display:flex;
+  align-items:center;
+  padding: 20px 0;
+  position:relative;
+  overflow:auto;
+  border-radius: 20px;
+}
+.ran-contact:hover {
+  background: #eee;
+}
+.ran-contact span {
+  text-shadow: -1px 0 #f6b917, 0 1px #f6b917, 1px 0 #f6b917, 0 -1px #f6b917;
+  color: #ddd;
+  transition: 0.5s ease; 
+  -webkit-transition: 0.5s ease;
+  position:absolute;
+  right: 20px;
+}
+.ran-contact:hover span {
+  transition: 0.5s ease; 
+  -webkit-transition: 0.5s ease;
+  color: #f6b917;
+}
+.ran-contact img {
+  height: 55px;
+  border-radius: 100%;
+  margin: 0 20px;
+  border: 5px solid #fff;
+}
+.ran-contact div {
+  display:flex;
+  flex-direction:column;
+}
+.ran-contact div b {
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #444;
+}
+.ran-contact div a {
+  color: #8186ca;
+  text-decoration:none;
+}
+
+
+
+
+
+@keyframes Gradient {0% {background-position: 0% 50%} 50% {background-position: 100% 50%} 100% {background-position: 0% 50%}}
